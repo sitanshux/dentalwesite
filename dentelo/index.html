@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="#">anyname</a></div>
+        <div class="navitem">
+          <ul class="sidebar">
+              <li onclick='hidebar()'><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="black"><path d="M6.4,19L5,17.6L10.6,12L5,6.4L6.4,5L12,10.6L17.6,5L19,6.4L13.4,12L19,17.6L17.6,19L12,13.4L6.4,19Z"/></svg></a></li>
+            <li><a href="#">home</a></li>
+            <li><a href="#">blog</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+        <ul>
+            <li class="hide"><a href="#">home</a></li>
+            <li class="hide"><a href="#">blog</a></li>
+            <li class="hide"><a href="#">about</a></li>
+            <li class="hide"><a href="#">contact</a></li>
+            <li class="ninja" onclick=showsidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="black"><path d="M3,18V16H21v2H3Zm0-5V11H21v2H3ZM3,8V6H21V8H3Z"/></svg></a></li>
+        </ul>
+    </div>
+        
+    </nav>
+    <script>
+        function showsidebar(){
+            const sidebar=document.querySelector('.sidebar');
+            sidebar.style.display='flex';
+        }
+        function hidebar(){
+            const hide=document.querySelector('.sidebar');
+            hide.style.display='none';
+        }
+    </script>
+</body>
+</html>
